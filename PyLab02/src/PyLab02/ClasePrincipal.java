@@ -21,8 +21,7 @@ public class ClasePrincipal {
 		System.out.println(Fido.toString());
 		System.out.println("------------------------------------Pelusa------------------------------------");
 		System.out.println(Pelusa.toString());
-		ClaseDiagnostico FidoD = new ClaseDiagnostico(Fido);
-		ClaseDiagnostico PelusaD = new ClaseDiagnostico(Pelusa);
+		ClaseDiagnostico cD = new ClaseDiagnostico();
 		
 		System.out.println("Ingrese la nueva temperatura de Fido: ");
 		tF = sc.nextInt();
@@ -49,10 +48,10 @@ public class ClasePrincipal {
 		System.out.println(Pelusa.toString());
 		
 		System.out.println("Diagnostico Fido:");
-		FidoD.AptoVacunaA(Fido.getTemp(), Fido.getPeso(), Fido.getEdad());
-		FidoD.AptoVacunaB(Fido.getTemp(), Fido.getPeso(), Fido.getEdad());
+		cD.AptoVacunaA(Fido);
+		cD.AptoVacunaB(Fido);
 		System.out.println("Diagnostico Pelusa:");
-		PelusaD.AptoVacunaA(Pelusa.getTemp(), Pelusa.getPeso(), Pelusa.getEdad());
-		PelusaD.AptoVacunaB(Pelusa.getTemp(), Pelusa.getPeso(), Pelusa.getEdad());
+		cD.AptoVacunaA(Pelusa);
+		cD.AptoVacunaB(Pelusa);
 	}
 }
